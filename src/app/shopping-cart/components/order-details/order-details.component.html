@@ -1,0 +1,27 @@
+<div class="order-detail-view page-view">
+  <h2>{{this.selectedOrder ? 'Update' : 'New'}} Item</h2>
+
+  <table>
+    <tr>
+      <td><label>Name: </label></td>
+      <td><select [(ngModel)]="selectedItem" (ngModelChange)="calculatePrice()">
+          <option *ngFor="let item of inventoryItems" [ngValue]="item">{{item.name}}</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td><label>Qty: </label></td>
+      <td><input type="number" min="1" [(ngModel)]="selectedQuantity" (ngModelChange)="calculatePrice()" /></td>
+    </tr>
+    <tr>
+      <td><label>Price: </label></td>
+      <td><span>{{ calculatedPrice | currency }}</span></td>
+    </tr>
+  </table>
+
+  <div class="actions">
+    <button (click)="onSave()" [disabled]="calculatedPrice == null" class="btn-primary">
+      {{this.selectedOrder ? 'Update' : 'Add'}}
+    </button>
+    <button (click)="onCancel()" class="btn-default">Cancel</button>
+  </div>
+</div>

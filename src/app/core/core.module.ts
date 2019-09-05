@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { InventoryService } from './services/inventory.service';
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -11,6 +13,9 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     CommonModule
+  ],
+  providers: [
+    InventoryService
   ],
   exports: [
     HeaderComponent,
