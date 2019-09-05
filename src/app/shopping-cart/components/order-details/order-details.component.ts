@@ -1,9 +1,9 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 import { Order } from '../../models/order.model';
-import { InventoryItem } from 'src/app/core/models/inventory-item.model';
+import { InventoryItem } from '../../../core/models/inventory-item.model';
 
-import { InventoryService } from 'src/app/core/services/inventory.service';
+import { InventoryService } from '../../../core/services/inventory.service';
 import { OrderService } from '../../services/order.service';
 
 @Component({
