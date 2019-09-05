@@ -1,0 +1,11 @@
+@mixin setPage($width, $align) {
+  width: $width;
+  margin: 0 auto;
+  text-align: $align;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}

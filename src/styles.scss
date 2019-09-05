@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './sass/_variables';
+@import './sass/_mixins';
+@import './sass/_partials';
+@import './sass/_reset';
+@import './sass/_responsive';
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+header,
+footer,
+.page-container {
+  @include setPage(80%, left);
+}
+
+.page-container {
+  min-height: 400px;
+  text-align: left;
+  padding: 10px;
+}
+
+.page-view {
+  @extend %page-view;
+  background: #fdfdfd;
+}
+
+.btn-primary {
+  @extend %button;
+
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.btn-default {
+  @extend %button;
+
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}

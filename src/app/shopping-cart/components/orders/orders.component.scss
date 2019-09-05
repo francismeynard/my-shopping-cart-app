@@ -1,0 +1,96 @@
+.orders-view {
+  width: 56%;
+  float: right;
+
+  table {
+    width: 100%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 0px;
+    padding: 0px;
+    background: #fff;
+
+    thead {
+      td {
+        font-weight: 600;
+        font-size: 18px;
+        height: 30px;
+        vertical-align: middle;
+      }
+    }
+
+    tr {
+      height: 30px;
+
+      &.selected {
+        background-color: #a9fdea !important;
+      }
+
+      td {
+        padding-left: 10px;
+        width: 30%;
+      }
+
+      td:nth-child(1) {
+        color: #1e88e5;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      td:nth-child(2) {
+        width: 30%;
+      }
+
+      td:last-of-type {
+        text-align: center;
+        font-weight: 700;
+        color: #c9302c;
+        width: 10%;
+        padding: 0px;
+        cursor: pointer;
+      }
+    }
+
+    tr:nth-child(even) {
+      background: #f3f3f3;
+
+      td {
+        border: #f3f3f3;
+      }
+    }
+
+    tfoot {
+      text-align: right;
+    }
+  }
+
+  .total-price {
+    text-align: right;
+    margin: 30px;
+    font-weight: 600;
+    font-size: 28px;
+  }
+
+}
+
+@media only screen and (max-width:1180px) {
+  .orders-view {
+    width: 53%;
+  }
+}
+
+@media only screen and (max-width:980px) {
+  .orders-view {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:870px) {
+  .orders-view {
+    width: 45%;
+  }
+}
