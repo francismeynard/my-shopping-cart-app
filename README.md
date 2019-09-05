@@ -23,7 +23,7 @@ This a simple shopping cart application using the latest version of angular (ver
 
 When building the app, install the dependencies first. Two options to build the app.
 
-1. Run `npm build`. This will implicitly execute `npm install` and `ng build`.
+1. Run `npm run build`. This will implicitly execute `npm install` and `ng build` respectively.
 
 2. Run `npm install` first, then `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
