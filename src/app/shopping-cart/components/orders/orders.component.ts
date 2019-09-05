@@ -20,6 +20,8 @@ export class OrdersComponent implements OnInit {
   }
 
   onDelete(order: Order) {
+    this.orderService.delete(order);
+    this.initOrderList();
   }
 
   onSelect(order: Order) {
@@ -37,7 +39,7 @@ export class OrdersComponent implements OnInit {
   }
 
   private initOrderList() {
-    this.orders = [];
+    this.orders = this.orderService.list();
   }
 
 }

@@ -51,7 +51,11 @@ export class OrderDetailsComponent implements OnInit {
       price: this.calculatedPrice
     };
 
-    // TODO: call OrderService save/update
+    if (this.selectedOrder) {
+      this.orderService.update(order);
+    } else {
+      this.orderService.add(order);
+    }
 
     this.resetSelections();
   }

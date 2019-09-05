@@ -8,12 +8,12 @@
       <td>Price</td>
       <td>&nbsp;</td>
     </thead>
-    <tr *ngFor="let order of orders" class="order">
-      <td>
+    <tr *ngFor="let order of orders" [class.selected]="order === selectedOrder" class="order">
+      <td (click)="onSelect(order); orderDetails.setSelectedOrder(order)" title="Update {{order.name}}">
         <span>{{order.name}}</span></td>
       <td><span>{{order.quantity}}</span></td>
       <td><span>{{order.price | currency}}</span></td>
-      <td><span>x</span></td>
+      <td (click)="onDelete(order)" title="Delete {{order.name}}"><span>x</span></td>
     </tr>
   </table>
 
@@ -22,4 +22,5 @@
   </div>
 </div>
 
-<app-order-details></app-order-details>
+<app-order-details #orderDetails [selectedOrder]="selectedOrder" (updateOrdersEvent)="processUpdateOrdersEvent($event)">
+</app-order-details>
